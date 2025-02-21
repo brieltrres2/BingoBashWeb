@@ -1,0 +1,60 @@
+body {
+  margin: 0;
+  font-family: "Lexend", serif;
+  font-optical-sizing: auto;
+  font-weight: 150;
+  font-style: normal;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  color: white;
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New', monospace;
+}
+
+/* Typewriter effect */
+@keyframes typing {
+  from {
+    width: 0ch;
+  }
+  to {
+    width: 26ch; /* Adjust this value to match the text's actual length */
+  }
+}
+
+@keyframes blinkCaret {
+  from, to {
+    border-color: transparent;
+  }
+  50% {
+    border-color: #89b8ff;
+  }
+}
+
+.typing-animation {
+  display: inline-block;      /* Ensures width is determined by content */
+  overflow: hidden;           /* Hide text until it is typed */
+  white-space: nowrap;        /* Prevent wrapping */
+  border-right: 2px solid #89b8ff; /* The caret */
+  font-family: monospace;     /* Gives a typewriter look */
+  font-size: 2.5em;           /* Adjust font size as needed */
+  width: 0;                   /* Start with no visible width */
+  /* Animate to 25ch using steps(25, end); adjust if text length differs */
+  animation: typing 1s steps(26, end) forwards, blinkCaret 0.75s step-end infinite;
+}
+
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.fade-in-up {
+  animation: fadeInUp 1s ease-out forwards;
+}

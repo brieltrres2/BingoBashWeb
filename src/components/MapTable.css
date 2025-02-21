@@ -1,0 +1,28 @@
+/* src/components/MapTable.css */
+
+.table-container {
+    max-width: 2000px; /* Adjust as needed */
+    margin: 30px auto;
+    overflow-x: auto;  /* Enables horizontal scrolling on smaller screens */
+  }
+  
+  table {
+    width: 100%;
+    border-collapse: collapse;
+    font-family: Lexend, serif;
+    color: #fff; /* Example text color */
+    background-color: #2c2c2c; /* Example background color */
+  }
+  
+  thead th {
+    background-color: #404040;
+    padding: 10px;
+    text-align: center;
+    font-weight: bold;
+    border-bottom: 2px solid #666;
+  }
+  
+  tbody td {
+    padding: 5px 1px;
+  }
+  

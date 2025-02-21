@@ -1,0 +1,45 @@
+.bingo-container {
+    display: flex;
+    flex-direction: column; /* if you have additional content above/below */
+    align-items: center;    /* centers horizontally */
+    justify-content: center; /* centers vertically */
+    min-height: 100vh;      /* makes the container fill the viewport height */
+  }
+  
+  
+  .board-grid {
+    display: grid;
+    gap: 5px;
+    margin: auto;
+  }
+  
+  .bingo-cell {
+    font-family: "Lexend", serif;
+    height: 100px;
+    width: 100px;
+    display: flex;
+    color: black;
+    justify-content: center;  /* centers content horizontally */
+    align-items: center;      /* centers content vertically */
+    text-align: center;       /* ensures text is centered */
+    transition: background 0.2s ease-in-out;
+  }
+  
+  .public-cell {
+    background: lightgray;
+  }
+  
+  .winning-cell {
+    background: rgba(0, 255, 0, 0.6);
+  }
+  
+  .admin-cell {
+    background: rgb(109, 109, 109);
+    cursor: pointer;
+  }
+  
+  .admin-cell.marked {
+    background: rgb(0, 255, 0);
+  }
+  
+  
