@@ -102,3 +102,23 @@ p {
   transform: translateY(-1000px);
   transition: opacity 300ms ease-out;
 }
+
+@keyframes fadeInCascade {
+  from {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes fadeInLink {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}

@@ -10,6 +10,7 @@ import Layout from "./Layout";
 import Info from "./Info";
 import "./App.css";
 import MapTablePage from "./components/MapTablePage";
+import NotFound from "./pages/404";
 
 const AppRoutes = () => {
   const location = useLocation();
@@ -32,6 +33,7 @@ const AppRoutes = () => {
               <Route path="info" element={<Info />} />
               <Route path="public/:cardID" element={<PublicViewWrapper />} />
               <Route path="admin/:cardID" element={<AdminViewWrapper />} />
+              <Route path="*" element={<NotFound />} /> {/* Catch-all route */}
               <Route path="test" element={<TestFirestore />} />
             </Route>
           </Routes>

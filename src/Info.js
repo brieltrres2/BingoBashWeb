@@ -1,7 +1,8 @@
 // src/components/Info.js
 import React from "react";
 import { Link } from "react-router-dom";
-import "./index.css"
+import "./index.css";
+import DropdownMenu from "./components/DropdownMenu";
 
 const buttonStyle = {
   display: "grid",
@@ -30,25 +31,27 @@ const textContainerStyle = {
   textAlign: "center",
 };
 
-
 const Info = () => {
   return (
-    <div
-      className="home-container"
-      style={{ padding: "20px", textAlign: "center" }}
-    >
+    // Set position: relative so that our absolute dropdown is positioned relative to this container.
+    <div className="home-container" style={{ padding: "20px", textAlign: "center", position: "relative" }}>
+      
+      {/* Dropdown menu positioned at the top right corner */}
+      <div style={{ position: "absolute", top: "10px", right: "10px", zIndex: 1000 }}>
+        <DropdownMenu />
+      </div>
+      
       {/* Four separate text containers */}
-<div className="text-container" style={{ color: "#f7df1e", marginBottom: "250px" }}>
-  <h1 className="typing-animation">Welcome to Bingo Bash Web!</h1>
-</div>
-
-      <div className="text-container" style={{color: "#89b8ff",animation: "fadeInUp 1s ease-out forwards", textDecoration: "underline", marginBottom: "50px" }}>
+      <div className="text-container" style={{ color: "#f7df1e", marginBottom: "250px" }}>
+        <h1 className="typing-animation">Welcome to Bingo Bash Web!</h1>
+      </div>
+      <div className="text-container" style={{ color: "#89b8ff", animation: "fadeInUp 1s ease-out forwards", textDecoration: "underline", marginBottom: "50px" }}>
         <p>Follow our updates and join the Discord Server!</p>
       </div>
-      <div className="text-container" style={{color: "#89b8ff",animation: "fadeInUp 1.5s ease-out forwards",  marginBottom: "260px" }}>
+      <div className="text-container" style={{ color: "#89b8ff", animation: "fadeInUp 1.5s ease-out forwards", marginBottom: "260px" }}>
         <p>Explore our links below for more information.</p>
       </div>
-      <div className="text-container" style={{color:"rgba(132, 181, 255, 0.47)", animation: "fadeInUp 2s ease-out forwards", textDecoration: "underline", fontWeight: "70", marginBottom: "90px" }}>
+      <div className="text-container" style={{ color:"rgba(132, 181, 255, 0.47)", animation: "fadeInUp 2s ease-out forwards", textDecoration: "underline", fontWeight: "70", marginBottom: "90px" }}>
         <p>▽ Scroll down for more links ▽</p>
       </div>
 
@@ -187,10 +190,9 @@ const Info = () => {
           </div>
           <div style={textContainerStyle}>Forum Post</div>
         </a>
-        <div className="text-container" style={{color:"rgba(132, 181, 255, 0.15)", fontStyle: "italic", fontWeight: "70", marginTop: "90px", marginBottom: "90px" }}>
-        <p>kami was here :p</p>
-      </div>
-
+        <div className="text-container" style={{ color: "rgba(132, 181, 255, 0.15)", fontStyle: "italic", fontWeight: "70", marginTop: "90px", marginBottom: "90px" }}>
+          <p>kami was here :p</p>
+        </div>
       </div>
     </div>
   );

@@ -1,8 +1,8 @@
 import axios from "axios";
 
 // Replace these with your actual Google Sheets details.
-const SHEET_ID = process.env.SHEET_ID;
-const API_KEY = process.env.API_KEY;
+const SHEET_ID = process.env.REACT_APP_SHEET_ID;
+const API_KEY = process.env.REACT_APP_GOOGLE_API;
 // Function to determine the range based on grid size.
 const getSheetRange = (gridSize) => {
   if (gridSize === 3) return "cards3.db!A2:J";
